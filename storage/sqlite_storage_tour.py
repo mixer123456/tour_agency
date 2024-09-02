@@ -134,28 +134,4 @@ class StorageSQLite(BaseStorageTour):
             cursor.execute(query, {'Id': _id})
 
 
-storage = StorageSQLite('test.sqlite')
-# tours = storage.get_tours()
-# print(tours)
-#
-# storage.create_tour({
-#     'id': 1,
-#     'price': 132,
-#     'title': 'Title'
-# })
-
-tour = {
-    'id': 1,
-    'price': 132,
-    'title': 'Title',
-    'description': 'pampam',
-    'cover': 'http://example.com'
-}
-newTour = NewTour(
-    title= tour['title'],
-    price=tour['price'],
-    description=tour['description'],
-    cover=tour['cover']
-)
-storage.create_tour(newTour)
-# print(newTour.__dict__)s
+storage = StorageSQLite('database/tours.sqlite')
